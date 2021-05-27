@@ -29,6 +29,12 @@ var tests = []struct {
 		},
 		want: "",
 	}, {
+		name: "testing with uneven spaces",
+		args: args{
+			s: "here is   the cat     you were looking        for",
+		},
+		want: "for looking were you cat the is here",
+	}, {
 		name: "testing hello world",
 		args: args{
 			s: "hello world",
