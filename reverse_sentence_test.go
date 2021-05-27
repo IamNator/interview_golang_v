@@ -16,6 +16,13 @@ var tests = []struct {
 	want string
 }{
 	{
+		name: "testing single word",
+		args: args{
+			s: "hello",
+		},
+		want: "hello",
+	},
+	{
 		name: "testing empty",
 		args: args{
 			s: "",
