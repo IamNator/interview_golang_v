@@ -25,7 +25,7 @@ func ReverseSentence(sentence string) (reversedSentence string) {
 		return sentence
 	}
 
-	words := strings.Split(sentence, " ") //split the sentence into a slice of words
+	words := regexp.MustCompile(`\w+`).FindAllString(sentence, -1) //split the sentence into a slice of words
 	for _, word := range words {
 		reversedSentence = word + " " + reversedSentence
 	}
